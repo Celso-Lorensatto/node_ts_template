@@ -1,0 +1,25 @@
+{
+  "name": "node_ts_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:prd": "npm run build && npm run start",
+    "start:dev": "NODE_ENV=dev nodemon --watch ./ --ext ts --exec 'ts-node -r tsconfig-paths/register ./src/index.ts'",
+    "build": "tsc",
+    "start": "NODE_ENV=prd node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "typescript": "^5.4.5"
+  }
+}
